@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { MandateModule } from './mandate/mandate.module';
+import { ThirdPartyModule } from './third-party/third-party.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { MandateModule } from './mandate/mandate.module';
     AuthModule,
     UserModule,
     MandateModule,
+    ThirdPartyModule,
   ],
   controllers: [AppController],
   providers: [AppService],
