@@ -6,15 +6,22 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { MandateModule } from './mandate/mandate.module';
 import { ThirdPartyModule } from './third-party/third-party.module';
+import { MyConfigModule } from './config.module';
+import { ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      // process.env.DATA_BASE_URL,
-      'mongodb+srv://prem27ji:prem123@mydb.g91fodj.mongodb.net/?retryWrites=true&w=majority',
-      // 'mongodb://localhost:27017/e-nach-backend',
-      //  { useNewUrlParser: true }
-    ),
+    MongooseModule.forRootAsync({
+      imports: [MyConfigModule], // Import the configuration module
+      useFactory: async (configService: ConfigService) => ({
+        uri: configService.get<string>('DATABASE_URL'), // Use the method to retrieve the URL
+        useNewUrlParser: true,
+      }),
+      inject: [ConfigService], // Inject ConfigService into the factory
+    }),
+    // MongooseModule.forRoot(
+    //   'mongodb+srv://prem27ji:prem123@mydb.g91fodj.mongodb.net/?retryWrites=true&w=majority',
+    // ),
     AuthModule,
     UserModule,
     MandateModule,

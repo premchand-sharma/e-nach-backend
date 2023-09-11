@@ -15,7 +15,7 @@ import { MongooseModule } from '@nestjs/mongoose';
     PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.register({
       secret: 'mystrongsecret123', //'your-secret-key', // Replace with your secret key
-      signOptions: { expiresIn: '12h' }, // Token expiration time
+      signOptions: { expiresIn: '240h' }, // Token expiration time
     }),
   ],
   controllers: [AuthController],

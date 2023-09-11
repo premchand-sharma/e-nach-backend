@@ -204,7 +204,7 @@
 
     <script>
         async function reloadPage() {
-            window.location.href = "https://enachbackend.algofolks.com/third-party/getCreateMandateForm";
+            window.location.href = "$$base_url$$/third-party/getCreateMandateForm";
         }
 
         async function createMandate() {
@@ -249,7 +249,7 @@
                 redirect: 'follow'
             };
             try {
-                const response = await fetch("https://enachbackend.algofolks.com/third-party/addMandateFormData", requestOptions)
+                const response = await fetch("$$base_url$$/third-party/addMandateFormData", requestOptions)
                 if (response.ok) {
                     debugger
                     const result = await response.text();
@@ -257,7 +257,7 @@
                     document.getElementById("loader").classList.add("d-none");
                     document.getElementById("overlay").classList.add("d-none");
                     alert(`Mandate data submitted successfully! Click on OK to create another mandate`)
-                    window.location.href = "https://enachbackend.algofolks.com/third-party/getCreateMandateForm";
+                    window.location.href = "$$base_url$$/third-party/getCreateMandateForm";
                 } else {
                     debugger
                     document.getElementById("loader").classList.add("d-none");

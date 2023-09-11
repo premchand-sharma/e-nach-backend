@@ -15,11 +15,12 @@ export class ThirdPartyController {
   async getCreateMandateForm(@Res() res) {
     const filePath = `${process.cwd()}/src/template/createMandateForm.html`;
     var  htmlForm = fs.readFileSync(filePath, 'utf8');
+    let content = htmlForm.replace(/\$\$base_url\$\$/g, process.env.BASE_URL)
     // Set the response content type to HTML
     res.header('Content-Type', 'text/html');
 
     // Send the HTML form as the response
-    res.send(htmlForm);
+    res.send(content);
   
   }
 
@@ -32,9 +33,9 @@ export class ThirdPartyController {
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: 'https://enachbackend.algofolks.com/mandate/addMandate',
+      url: `${process.env.BASE_URL}/mandate/addMandate`,
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGYwOTY0Y2QzM2ZkMzlhZTRiNGY1NGMiLCJpYXQiOjE2OTQxNzEwMTUsImV4cCI6MTY5NDIxNDIxNX0.iaTwBWEL_a1Z0FUe6QT5au3D8kBmotgOEhQY8TOSPo0',
+        'Authorization': process.env.AUTHORIZATIN_TOKEN,
         'Content-Type': 'application/json'
       },
       data: data
