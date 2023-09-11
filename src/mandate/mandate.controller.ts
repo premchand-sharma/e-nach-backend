@@ -34,7 +34,7 @@ export class MandateController {
   //   }
 
   @Post('addMandate')
-  @UseGuards(AuthGuard()) // Apply AuthGuard middleware
+  // @UseGuards(AuthGuard()) // Apply AuthGuard middleware
   async addMandate(@Res() res, @Body() createmandaterDTO: CreateMandateDTO) {
     const newMandate = await this.mandateService.addMandate(createmandaterDTO);
     return res.status(HttpStatus.OK).json({
