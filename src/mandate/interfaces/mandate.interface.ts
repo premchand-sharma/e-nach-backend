@@ -13,6 +13,7 @@ interface MandateData {
   customer_account_type: string;
   customer_ref_number: string;
   scheme_ref_number: string;
+  collection_amount: string;
 }
 
 export interface Mandate extends Document {

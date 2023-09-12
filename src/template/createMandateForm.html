@@ -136,9 +136,10 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-4">
-                            <label for="maximum_amount" class="col-sm-7 col-form-label pl-1">Maximum Amount:</label>
-                            <input type="text" class="form-control" id="maximum_amount" name="maximum_amount"
-                                autocomplete="off" placeholder="Please enter Maximum Amount">
+                            <label for="collection_amount" class="col-sm-7 col-form-label pl-1">Collection
+                                Amount:</label>
+                            <input type="text" class="form-control" id="collection_amount" name="collection_amount"
+                                autocomplete="off" placeholder="Please enter Collection Amount">
                         </div>
                         <div class="col-sm-4">
                             <label for="is_recurring" class="col-sm-7 col-form-label pl-1">Is Recurring:</label>
@@ -157,11 +158,18 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="maximum_amount" class="col-sm-7 col-form-label pl-1">Maximum Amount:</label>
+                            <input type="text" class="form-control" id="maximum_amount" name="maximum_amount"
+                                autocomplete="off" placeholder="Please enter Maximum Amount">
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group row mt-3">
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-9">
-                        <button type="button" class="btn btn-danger mr-2" onclick="reloadPage()">Cancel</button>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6 d-flex justify-content-center">
+                        <button type="button" class="btn btn-danger mr-5" onclick="reloadPage()">Cancel</button>
                         <button type="button" class="btn btn-success" onclick="createMandate()">Submit</button>
                     </div>
                 </div>
@@ -209,6 +217,7 @@
             let auth_mode = document.getElementById("auth_mode").value;
             let mandate_data = {};
             mandate_data.maximum_amount = document.getElementById("maximum_amount").value;
+            mandate_data.collection_amount = document.getElementById("collection_amount").value;
             mandate_data.instrument_type = "Debit"
             const date = new Date();
             date.setMonth(date.getMonth() + 1); //to get the date of next month

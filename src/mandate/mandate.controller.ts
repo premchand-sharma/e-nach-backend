@@ -75,7 +75,8 @@ export class MandateController {
     content = content.replace("$$account_number$$", mandate.mandate_data.customer_account_number ? mandate.mandate_data.customer_account_number:"")
     content = content.replace("$$maximum_ammount$$", mandate.mandate_data.maximum_amount ? mandate.mandate_data.maximum_amount:"")
     content = content.replace("$$start_date$$", formattedDate)
-    content = content.replace("$$frequency$$", mandate.mandate_data.frequency ? mandate.mandate_data .frequency:"")
+    content = content.replace("$$frequency$$", mandate.mandate_data.frequency ? mandate.mandate_data.frequency:"")
+    content = content.replace("$$collection_amount$$", mandate.mandate_data.collection_amount ? mandate.mandate_data.collection_amount:"")
 
     // Set the response content type to HTML
     res.header('Content-Type', 'text/html');
