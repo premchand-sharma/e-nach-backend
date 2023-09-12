@@ -66,12 +66,10 @@
                         <label for="customer_identifier" class="col-sm-7 col-form-label pl-1">Customer
                             Identifier:</label>
                         <input type="text" class="form-control" id="customer_identifier" name="customer_identifier"
-                            autocomplete="off" placeholder="Please enter your Email or Mobile">
+                            autocomplete="off" placeholder="Please enter Email or Mobile">
                     </div>
                     <div class="col-sm-4">
                         <label for="auth_mode" class="col-sm-5 col-form-label pl-1">Auth Mode:</label>
-                        <!-- <input type="text" class="form-control" id="auth_mode" name="auth_mode" autocomplete="off"
-                        placeholder="Please enter your Auth Mode"> -->
                         <select class="form-control" id="auth_mode" name="auth_mode">
                             <option value="" selected disabled>Select Auth Mode</option>
                             <option value="esign">E-Sign</option>
@@ -79,101 +77,14 @@
                             <option value="physical">Physical</option>
                         </select>
                     </div>
-                    <div class="col-sm-4">
-                        <label for="mandate_type" class="col-sm-6 col-form-label pl-1">Mandate Type:</label>
-                        <input type="text" class="form-control" id="mandate_type" name="mandate_type" autocomplete="off"
-                            value="created" readonly>
-                    </div>
                 </div>
-                <div class="form-group row">
-                    <div class="col-sm-4">
-                        <label for="corporate_config_id" class="col-sm-7 col-form-label pl-1">Corporate Config
-                            Id:</label>
-                        <input type="text" class="form-control" id="corporate_config_id" name="corporate_config_id"
-                            autocomplete="off" placeholder="Please enter your Corporate Config Id">
-                    </div>
-                </div>
-                <p>Mandate Details:- </p>
+                <p style="margin:15px 0px 8px 5px;">Customer Details:- </p>
                 <div style="border:solid rgba(139, 95, 136, 0.171) 2px">
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            <label for="maximum_amount" class="col-sm-7 col-form-label pl-1">Maximum Amount:</label>
-                            <input type="text" class="form-control" id="maximum_amount" name="maximum_amount"
-                                autocomplete="off" placeholder="Please enter your Maximum Amount">
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="instrument_type" class="col-sm-6 col-form-label pl-1">Instrument Type:</label>
-                            <input type="text" class="form-control" id="instrument_type" name="instrument_type"
-                                autocomplete="off" placeholder="Please enter your Instrument Type">
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="first_collection_date" class="col-sm-9 col-form-label pl-1">First Collection
-                                Date:</label>
-                            <input type="date" class="form-control" id="first_collection_date"
-                                name="first_collection_date" autocomplete="off"
-                                placeholder="Please enter your First Collection Date">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            <label for="is_recurring" class="col-sm-7 col-form-label pl-1">Is Recurring:</label>
-                            <!-- <input type="text" class="form-control" id="is_recurring" name="is_recurring"
-                                autocomplete="off" placeholder="Please enter your Is Recurring"> -->
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="is_recurring" name="is_recurring">
-                                <label class="form-check-label" for="is_recurring">Check if recurring</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="frequency" class="col-sm-5 col-form-label pl-1">Frequency:</label>
-                            <select class="form-control " disabled="true" id="frequency" name="frequency">
-                                <option value="" selected disabled>Select Frequency</option>
-                                <option value="Adhoc">Adhoc [means “As on when presented”]</option>
-                                <option value="IntraDay">IntraDay</option>
-                                <option value="Daily">Daily</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="management_category" class="col-sm-8 col-form-label pl-1">Management
-                                Category:</label>
-                            <input type="text" class="form-control" id="management_category" name="management_category"
-                                autocomplete="off" placeholder="Please enter your Management Category">
-                        </div>
-                    </div>
                     <div class="form-group row">
                         <div class="col-sm-4">
                             <label for="customer_name" class="col-sm-7 col-form-label pl-1">Customer Name:</label>
                             <input type="text" class="form-control" id="customer_name" name="customer_name"
-                                autocomplete="off" placeholder="Please enter your Customer Name">
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="customer_account_number" class="col-sm-9 col-form-label pl-1">Customer Account
-                                Number:</label>
-                            <input type="text" class="form-control" id="customer_account_number"
-                                name="customer_account_number" autocomplete="off"
-                                placeholder="Please enter your Customer Account Number">
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="destination_bank_id" class="col-sm-7 col-form-label pl-1">Destination Bank
-                                Id:</label>
-                            <input type="text" class="form-control" id="destination_bank_id" name="destination_bank_id"
-                                autocomplete="off" placeholder="Please enter Destination Bank Id">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            <label for="destination_bank_name" class="col-sm-9 col-form-label pl-1">Destination Bank
-                                Name:</label>
-                            <input type="text" class="form-control" id="destination_bank_name"
-                                name="destination_bank_name" autocomplete="off"
-                                placeholder="Please enter Destination Bank Name">
-                        </div>
-                        <div class="col-sm-4">
-                            <label for="customer_account_type" class="col-sm-9 col-form-label pl-1">Customer Account
-                                Type:</label>
-                            <input type="text" class="form-control" id="customer_account_type"
-                                name="customer_account_type" autocomplete="off"
-                                placeholder="Please enter Customer Account Type">
+                                autocomplete="off" placeholder="Please enter Customer Name">
                         </div>
                         <div class="col-sm-4">
                             <label for="customer_ref_number" class="col-sm-8 col-form-label pl-1">Customer Ref
@@ -181,13 +92,69 @@
                             <input type="text" class="form-control" id="customer_ref_number" name="customer_ref_number"
                                 autocomplete="off" placeholder="Please enter Customer Ref Number">
                         </div>
-                    </div>
-                    <div class="form-group row">
                         <div class="col-sm-4">
                             <label for="scheme_ref_number" class="col-sm-7 col-form-label pl-1">Scheme Ref
                                 Number:</label>
                             <input type="text" class="form-control" id="scheme_ref_number" name="scheme_ref_number"
                                 autocomplete="off" placeholder="Please enter Scheme Ref Number">
+                        </div>
+                    </div>
+                </div>
+                <p style="margin:15px 0px 8px 5px;">Mandate Details:- </p>
+                <div style="border:solid rgba(139, 95, 136, 0.171) 2px">
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="destination_bank_name" class="col-sm-9 col-form-label pl-1">Destination Bank
+                                Name:</label>
+                            <select class="form-control" id="destination_bank_name" name="destination_bank_name">
+                                <option value="" selected disabled>Select Destination Bank Name</option>
+                                <option value="hdfc">HDFC</option>
+                                <option value="hdfc">ICICI</option>
+                                <option value="sbi">State Bank Of India</option>
+                                <option value="pnb">Punjab National Bank</option>
+                                <option value="ppb">Paytm Payment Bank</option>
+                                <option value="cbi">Centeral Bank Of India</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="customer_account_type" class="col-sm-9 col-form-label pl-1">Customer Account
+                                Type:</label>
+                            <select class="form-control" id="customer_account_type" name="customer_account_type">
+                                <option value="" selected disabled>Select Account Type</option>
+                                <option value="Savings">Savings</option>
+                                <option value="Current">Current</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="customer_account_number" class="col-sm-9 col-form-label pl-1">Customer Account
+                                Number:</label>
+                            <input type="text" class="form-control" id="customer_account_number"
+                                name="customer_account_number" autocomplete="off"
+                                placeholder="Please enter Customer Account Number">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="maximum_amount" class="col-sm-7 col-form-label pl-1">Maximum Amount:</label>
+                            <input type="text" class="form-control" id="maximum_amount" name="maximum_amount"
+                                autocomplete="off" placeholder="Please enter Maximum Amount">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="is_recurring" class="col-sm-7 col-form-label pl-1">Is Recurring:</label>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="is_recurring" name="is_recurring">
+                                <label class="form-check-label" for="is_recurring">Check if recurring</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4" id="frequency-container" style="display: none;">
+                            <label for="frequency" class="col-sm-5 col-form-label pl-1">Frequency:</label>
+                            <select class="form-control" id="frequency" name="frequency">
+                                <option value="" selected disabled>Select Frequency</option>
+                                <option value="Adhoc">Adhoc [means “As on when presented”]</option>
+                                <option value="IntraDay">IntraDay</option>
+                                <option value="Daily">Daily</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -201,8 +168,30 @@
             </form>
         </div>
     </div>
+    <!-- Bootstrap Modal -->
+    <div class="modal" id="customAlert" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="message">No Message</h5>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class="modal-body">
+                    <p> Click on Create Another OR Open the link to show details.</p>
+                    <a id="link" href="#" target="_blank">Mandate Details link</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="reloadPage()">Create
+                        Another</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
+
         async function reloadPage() {
             window.location.href = "$$base_url$$/third-party/getCreateMandateForm";
         }
@@ -218,18 +207,19 @@
 
             let customer_identifier = document.getElementById("customer_identifier").value;
             let auth_mode = document.getElementById("auth_mode").value;
-            let mandate_type = document.getElementById("mandate_type").value;
-            let corporate_config_id = document.getElementById("corporate_config_id").value;
             let mandate_data = {};
             mandate_data.maximum_amount = document.getElementById("maximum_amount").value;
-            mandate_data.instrument_type = document.getElementById("instrument_type").value;
-            mandate_data.first_collection_date = document.getElementById("first_collection_date").value;
+            mandate_data.instrument_type = "Debit"
+            const date = new Date();
+            date.setMonth(date.getMonth() + 1); //to get the date of next month
+            mandate_data.first_collection_date = date
             mandate_data.is_recurring = document.getElementById("is_recurring").checked;
-            mandate_data.frequency = document.getElementById("frequency").value;
-            mandate_data.management_category = document.getElementById("management_category").value;
+            if (mandate_data.is_recurring) {
+                mandate_data.frequency = document.getElementById("frequency").value;
+            }
             mandate_data.customer_name = document.getElementById("customer_name").value;
             mandate_data.customer_account_number = document.getElementById("customer_account_number").value;
-            mandate_data.destination_bank_id = document.getElementById("destination_bank_id").value;
+            mandate_data.destination_bank_id = "d_bank_id" // its value based on selected bank name
             mandate_data.destination_bank_name = document.getElementById("destination_bank_name").value;
             mandate_data.customer_account_type = document.getElementById("customer_account_type").value;
             mandate_data.customer_ref_number = document.getElementById("customer_ref_number").value;
@@ -237,8 +227,8 @@
             var raw = JSON.stringify({
                 "customer_identifier": customer_identifier ? customer_identifier : "",
                 "auth_mode": auth_mode ? auth_mode : "",
-                "mandate_type": mandate_type ? mandate_type : "",
-                "corporate_config_id": corporate_config_id ? corporate_config_id : "",
+                "mandate_type": "created",
+                "corporate_config_id": "xyz_hard_code_value",
                 "mandate_data": mandate_data,
             });
 
@@ -254,14 +244,17 @@
                     debugger
                     const result = await response.text();
                     console.log(result);
+                    let DebitUrl = JSON.parse(result).DebitUrl
                     document.getElementById("loader").classList.add("d-none");
                     document.getElementById("overlay").classList.add("d-none");
-                    alert(`Mandate data submitted successfully! Click on OK to create another mandate`)
-                    window.location.href = "$$base_url$$/third-party/getCreateMandateForm";
+                    let Message = "Mandate data submitted successfully!"
+                    this.showCustomAlert(DebitUrl, Message)
                 } else {
                     debugger
                     document.getElementById("loader").classList.add("d-none");
                     document.getElementById("overlay").classList.add("d-none");
+                    let Message = "Mandate data not submitted successfully!"
+                    this.showCustomAlert(null, Message)
                     console.log('Response not OK:', response.status, response.statusText);
                 }
             }
@@ -269,16 +262,32 @@
                 // debugger
                 document.getElementById("loader").classList.add("d-none");
                 document.getElementById("overlay").classList.add("d-none");
+                let Message = "Mandate data not submitted successfully!"
+                this.showCustomAlert(null, Message)
                 console.log('Error:', error);
             }
         }
 
-        const isRecurringCheckbox = document.getElementById("is_recurring");
-        const frequencySelect = document.getElementById("frequency");
-        isRecurringCheckbox.addEventListener("change", function () {
-            frequencySelect.disabled = !this.checked;
-        });
+        function showCustomAlert(url, msg) {
+            if (msg) {
+                const messageElement = document.getElementById("message");
+                messageElement.textContent = msg;
+            }
+            const linkElement = document.getElementById("link");
+            linkElement.href = url;
+            linkElement.textContent = url;
+            $('#customAlert').modal('show');
+        }
 
+        const isRecurringCheckbox = document.getElementById("is_recurring");
+        const frequencyContainer = document.getElementById("frequency-container");
+        isRecurringCheckbox.addEventListener("change", function () {
+            if (this.checked) {
+                frequencyContainer.style.display = "block"; // Show the frequency container
+            } else {
+                frequencyContainer.style.display = "none"; // Hide the frequency container
+            }
+        });
     </script>
 </body>
 
